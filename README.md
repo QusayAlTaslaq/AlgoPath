@@ -14,25 +14,25 @@ New competitive programmers often know that they need to practise, but they do n
 
 ## Features
 
-* A structured roadmap with 12 topics and 3 learning levels
-* Difficulty filters for beginner, intermediate, and advanced topics
-* Search by topic name, description, or roadmap level
-* Topic detail dialog with learning goals and suggested practice
-* Progress tracking with a visual percentage and checklist
-* Progress saved in localStorage on the same browser
-* A practice zone with suggested Codeforces rating ranges
-* Mobile navigation and responsive layouts
-* Keyboard focus styles and accessible labels
-* A reduced motion option for users who request it in their device settings
+- A structured roadmap with 12 topics and 3 learning levels
+- Difficulty filters for beginner, intermediate, and advanced topics
+- Search by topic name, description, or roadmap level
+- Topic detail dialog with learning goals and suggested practice
+- Progress tracking with a visual percentage and checklist
+- Progress saved in localStorage on the same browser
+- A practice zone with suggested Codeforces rating ranges
+- Mobile navigation and responsive layouts
+- Keyboard focus styles and accessible labels
+- A reduced motion option for users who request it in their device settings
 
 ## Technologies
 
-* HTML5
-* CSS3
-* JavaScript modules
-* Web Components with Custom Elements
-* localStorage
-* CSS Grid and Flexbox
+- HTML5
+- CSS3
+- JavaScript modules
+- Web Components with Custom Elements
+- localStorage
+- CSS Grid and Flexbox
 
 No framework, backend, database, account, or build tool is required.
 
@@ -40,8 +40,8 @@ No framework, backend, database, account, or build tool is required.
 
 The project uses two custom HTML elements:
 
-* `<topic-card>` displays each roadmap topic and sends custom events when the user opens or completes it.
-* `<progress-panel>` displays the current completion percentage and topic checklist.
+- `<topic-card>` displays each roadmap topic and sends custom events when the user opens or completes it.
+- `<progress-panel>` displays the current completion percentage and topic checklist.
 
 Both components are defined in `js/components.js`.
 
@@ -83,11 +83,11 @@ Clearing browser storage or selecting **Reset progress** removes the saved progr
 
 ## Future improvements
 
-* Allow students to add a personal weekly problem goal
-* Add links to topic specific problem sets
-* Add a light colour theme
-* Let students export and import their progress
-* Add short code examples inside each topic
+- Allow students to add a personal weekly problem goal
+- Add links to topic specific problem sets
+- Add a light colour theme
+- Let students export and import their progress
+- Add short code examples inside each topic.
 
 ## Deployment
 
