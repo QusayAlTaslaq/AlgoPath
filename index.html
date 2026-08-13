@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AlgoPath gives beginner programmers a clear roadmap for learning competitive programming topics and tracking their progress."
+    />
+    <meta name="theme-color" content="#0b0e14" />
+    <title>AlgoPath | Your problem solving roadmap</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="AlgoPath home">
+          <span class="logo-mark" aria-hidden="true">A</span>
+          <span>AlgoPath</span>
+        </a>
+
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#roadmap">Roadmap</a>
+          <a href="#practice">Practice</a>
+          <a href="#progress">My progress</a>
+          <a class="nav-action" href="#roadmap">Start learning</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> Competitive programming, one topic at a time</p>
+            <h1>A clear path to <em>better problem solving.</em></h1>
+            <p class="hero-text">
+              Stop guessing what to learn next. Follow a focused roadmap, practise the right
+              problems, and keep track of every topic you finish.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#roadmap">
+                Explore the roadmap
+                <span aria-hidden="true">↗</span>
+              </a>
+              <button class="button button-secondary" id="continue-button" type="button">
+                Continue learning
+              </button>
+            </div>
+
+            <dl class="hero-stats" aria-label="Roadmap summary">
+              <div>
+                <dt>12</dt>
+                <dd>core topics</dd>
+              </div>
+              <div>
+                <dt>3</dt>
+                <dd>learning levels</dd>
+              </div>
+              <div>
+                <dt>60</dt>
+                <dd>suggested problems</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual" aria-label="A preview of the learning path">
+            <div class="visual-glow"></div>
+            <div class="focus-card">
+              <div class="focus-card-top">
+                <span class="tiny-label">YOUR NEXT STEP</span>
+                <span class="status-dot"><i></i> Ready</span>
+              </div>
+
+              <div class="path-preview">
+                <div class="path-node complete">
+                  <span class="node-icon">01</span>
+                  <div>
+                    <small>Completed</small>
+                    <strong>Arrays</strong>
+                  </div>
+                  <span class="node-check" aria-hidden="true">✓</span>
+                </div>
+
+                <div class="path-line active"></div>
+
+                <div class="path-node current">
+                  <span class="node-icon">02</span>
+                  <div>
+                    <small>Current topic</small>
+                    <strong>Two Pointers</strong>
+                  </div>
+                  <span class="node-arrow" aria-hidden="true">→</span>
+                </div>
+
+                <div class="path-line"></div>
+
+                <div class="path-node locked">
+                  <span class="node-icon">03</span>
+                  <div>
+                    <small>Coming next</small>
+                    <strong>Binary Search</strong>
+                  </div>
+                  <span class="node-lock" aria-hidden="true">○</span>
+                </div>
+              </div>
+
+              <div class="weekly-goal">
+                <div>
+                  <small>WEEKLY GOAL</small>
+                  <strong>3 of 5 problems</strong>
+                </div>
+                <div class="mini-progress" aria-hidden="true"><span></span></div>
+                <span class="goal-percent">60%</span>
+              </div>
+            </div>
+
+            <div class="floating-note note-one">Learn the idea</div>
+            <div class="floating-note note-two">Solve 5 problems</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="roadmap-section section" id="roadmap">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="section-number">01 / ROADMAP</p>
+              <h2>Choose your next topic</h2>
+              <p>Start with the basics, then move forward when the ideas feel natural.</p>
+            </div>
+            <div class="completion-pill" aria-live="polite">
+              <span id="completed-count">0</span>/12 completed
+            </div>
+          </div>
+
+          <div class="roadmap-tools">
+            <div class="filter-group" aria-label="Filter topics by difficulty">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-button" type="button" data-filter="beginner" aria-pressed="false">Beginner</button>
+              <button class="filter-button" type="button" data-filter="intermediate" aria-pressed="false">Intermediate</button>
+              <button class="filter-button" type="button" data-filter="advanced" aria-pressed="false">Advanced</button>
+            </div>
+
+            <label class="search-box">
+              <span class="sr-only">Search topics</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+              </svg>
+              <input id="topic-search" type="search" placeholder="Search a topic" autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="level-guide" aria-label="Roadmap levels">
+            <div><span>01</span><strong>Programming basics</strong></div>
+            <i></i>
+            <div><span>02</span><strong>Problem solving</strong></div>
+            <i></i>
+            <div><span>03</span><strong>Intermediate tools</strong></div>
+          </div>
+
+          <div class="topic-grid" id="topic-grid" aria-live="polite"></div>
+
+          <div class="empty-state" id="empty-state" hidden>
+            <span>?</span>
+            <h3>No topics found</h3>
+            <p>Try another search or change the difficulty filter.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice-section section" id="practice">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-number">02 / PRACTICE ZONE</p>
+            <h2>Pick the right challenge</h2>
+            <p>Build confidence with problems that match your current level.</p>
+          </div>
+
+          <div class="practice-grid">
+            <article class="practice-card beginner-card">
+              <div class="practice-card-top">
+                <span class="difficulty-light green"></span>
+                <span>BEGINNER</span>
+              </div>
+              <h3>800 to 1000</h3>
+              <p>Focus on implementation, loops, arrays, and reading the problem carefully.</p>
+              <ul>
+                <li>Warm up with 2 easy problems</li>
+                <li>Write the idea before coding</li>
+                <li>Review every wrong answer</li>
+              </ul>
+              <a href="https://codeforces.com/problemset" target="_blank" rel="noreferrer">
+                Open problem set <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="practice-card intermediate-card">
+              <div class="practice-card-top">
+                <span class="difficulty-light yellow"></span>
+                <span>INTERMEDIATE</span>
+              </div>
+              <h3>1100 to 1400</h3>
+              <p>Combine familiar ideas and learn to recognise common problem patterns.</p>
+              <ul>
+                <li>Set a 35 minute timer</li>
+                <li>Compare two possible solutions</li>
+                <li>Record the pattern you missed</li>
+              </ul>
+              <a href="https://codeforces.com/problemset" target="_blank" rel="noreferrer">
+                Open problem set <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="practice-card advanced-card">
+              <div class="practice-card-top">
+                <span class="difficulty-light red"></span>
+                <span>ADVANCED</span>
+              </div>
+              <h3>1500+</h3>
+              <p>Work on deeper observations, proof, optimisation, and combining techniques.</p>
+              <ul>
+                <li>Explain why the solution works</li>
+                <li>Check time and memory limits</li>
+                <li>Upsolve after every contest</li>
+              </ul>
+              <a href="https://codeforces.com/problemset" target="_blank" rel="noreferrer">
+                Open problem set <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="progress-section section" id="progress">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-number">03 / MY PROGRESS</p>
+            <h2>Small wins add up</h2>
+            <p>Your progress is saved automatically on this device.</p>
+          </div>
+
+          <progress-panel></progress-panel>
+        </div>
+      </section>
+
+      <section class="method-section section">
+        <div class="container method-grid">
+          <div class="section-heading">
+            <p class="section-number">04 / HOW TO USE ALGOPATH</p>
+            <h2>Keep the routine simple</h2>
+          </div>
+
+          <ol class="method-list">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Learn one idea</h3>
+                <p>Understand the pattern and write a small example before solving a full problem.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Practise with purpose</h3>
+                <p>Solve a few focused problems instead of jumping randomly between topics.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Mark it and move on</h3>
+                <p>Complete a topic, check your progress, and choose the next challenge.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true">A</span>
+          <span>AlgoPath</span>
+        </a>
+        <p>Built for students who want a clearer way to practise.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <dialog class="topic-dialog" id="topic-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close topic details">×</button>
+        <div id="dialog-content"></div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
