@@ -6,7 +6,7 @@ Instead of presenting a long list of unrelated tutorials, AlgoPath organises twe
 
 ## Live demo
 
-Add the GitHub Pages link here after deployment.
+https://qusayaltaslaq.github.io/AlgoPath/
 
 ## Why I built it
 
