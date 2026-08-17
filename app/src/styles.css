@@ -33,6 +33,10 @@ body {
   line-height: 1.6;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 button,
 input {
   font: inherit;
@@ -339,10 +343,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-}
-
-topic-card {
-  display: block;
 }
 
 .topic-card {
